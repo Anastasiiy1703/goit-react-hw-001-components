@@ -17,16 +17,4 @@ import TransactionHistory from './TransactionHistory';
 };
 
 
-
-// const App = () => {
-//   return (
-//     <>
-//       <Profile />
-//       <Statistics />
-//       <FriendList />
-//       <TransactionHistory />
-//     </>
-//   );
-// };
-
 export default App;

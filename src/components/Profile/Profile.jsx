@@ -1,32 +1,31 @@
-import user from '../user.json';
 import ProfileCss from './Profile.module.css'
-const Profile = ({ username, avatar, location, stats, tag }) => {
+const Profile = ({ userData }) => {
   return  (
     <>
           <div className={ProfileCss.profile}>
   <div className="description">
     <img
-        src={user.avatar}
+        src={userData.avatar}
         alt="User avatar"
         className={ProfileCss.avatar}
     />
-    <p className={ProfileCss.name}>{user.username}</p>
-    <p className={ProfileCss.tag}>@{user.tag}</p>
-    <p className={ProfileCss.location}>{user.location}</p>
+    <p className={ProfileCss.name}>{userData.username}</p>
+    <p className={ProfileCss.tag}>@{userData.tag}</p>
+    <p className={ProfileCss.location}>{userData.location}</p>
   </div>
 
     <ul className={ProfileCss.stats}>
     <li>
       <span className={ProfileCss.label}>Followers</span>
-      <span className={ProfileCss.quantity}>{user.stats.followers}</span>
+      <span className={ProfileCss.quantity}>{userData.stats.followers}</span>
     </li>
     <li>
       <span className={ProfileCss.label}>Views</span>
-      <span className={ProfileCss.quantity}>{user.stats.views}</span>
+      <span className={ProfileCss.quantity}>{userData.stats.views}</span>
     </li>
     <li>
       <span className={ProfileCss.label}>Likes</span>
-      <span className={ProfileCss.quantity}>{user.stats.likes}</span>
+      <span className={ProfileCss.quantity}>{userData.stats.likes}</span>
     </li>
   </ul> 
 </div>
